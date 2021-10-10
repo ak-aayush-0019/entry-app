@@ -1,0 +1,46 @@
+<%-include('../partials/header')%>
+<%-include('../partials/navbar')%>
+
+
+
+<main class="container mt-5" style="width: 65vw;">
+  <h3 class="p-1">Entry page</h3>
+<form action="/entry" method="POST">
+  
+  <label for="basic-url" class="form-label">Name:</label>
+    <div class="input-group mt-10">
+     
+        <span class="input-group-text"  id="basic-addon1">@</span>
+        <input type="text" class="form-control" id="name" placeholder="Your name" name="name" aria-describedby="basic-addon3">
+      </div>
+    <br>
+
+    <label for="basic-url" class="form-label">Phone No:</label>
+    <div class="input-group mt-10">
+     
+        <span class="input-group-text"  id="basic-addon1">&phone;</span>
+        <input type="text" class="form-control" id="number" placeholder="Your number" name="phone"  aria-describedby="basic-addon3">
+      </div>
+    <br>
+
+
+      <label for="basic-url" class="form-label">Email:</label>
+      <div class="input-group mb-3">
+       
+        <input type="text" class="form-control" id="basic-url" name="email" aria-describedby="basic-addon3">
+        <span class="input-group-text" id="basic-addon3">@gmail</span>
+      </div>
+
+
+      <div class="input-group mb-3">
+        <input type="text" disabled class="form-control" placeholder="Time: <%=time%>" name="time" aria-label="Username">
+        <!-- <span class="input-group-text">@</span> -->
+        <input type="text" disabled class="form-control" placeholder="Day: <%=day%>" name="day" aria-label="Server">
+      </div>
+
+      <button type="submit" class="btn btn-outline-primary">Submit</button>
+</form>
+
+</main>
+<%-include('../partials/footer')%>
+

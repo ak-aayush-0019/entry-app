@@ -1,0 +1,52 @@
+<%-include("../partials/header")%>
+<%-include('../partials/navbar')%>
+<main class="container mt-5">
+    
+<h2 mt-5> Thanks for giving us an opportunity to serve you</h2>
+<p style="font-size: 2rem;">We would we more than happy to hear from you, our feedback<br>which would help us to improve on our service significantly</p>
+<div class="d-flex justify-content-center flex-column ">
+<!-- star code -->
+
+
+<form >
+        <!-- Change starability-basic to different class to see animations. -->
+    <fieldset class="starability-basic" mb-3>
+<legend >Please give us a rating :</legend>      
+      <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
+
+      <input type="radio" id="rate1" name="rating" value="1" />
+      <label for="rate1">1 star.</label>
+
+      <input type="radio" id="rate2" name="rating" value="2" />
+      <label for="rate2">2 stars.</label>
+
+      <input type="radio" id="rate3" name="rating" value="3" />
+      <label for="rate3">3 stars.</label>
+
+      <input type="radio" id="rate4" name="rating" value="4" />
+      <label for="rate4">4 stars.</label>
+
+      <input type="radio" id="rate5" name="rating" value="5" />
+      <label for="rate5">5 stars.</label>
+
+      <span class="starability-focus-ring"></span>
+    </fieldset>
+  
+</form>
+
+
+
+<div class="mb-3 mt-3">
+   <fieldset>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Any suggestions ?..."></textarea>
+</fieldset>
+  </div>
+
+
+<form action="/leave" method="POST">
+    <button type="submit" class=" btn btn-outline-danger">Leave</button>
+    </form>
+</div>
+</main>
+
+<%-include('../partials/footer')%>
