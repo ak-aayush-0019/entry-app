@@ -68,12 +68,14 @@ const Entry=mongoose.model('Entry',entrySchema);
 
 
 const day=new Date().toDateString();
+console.log(day);
    const p= new Date().toLocaleString();
+   console.log(p);
    const time =new Date().toLocaleString().substring(p.length-11);
 let em="";
 let ag="";
 
-   app.post('/entry',(req,res)=>{
+   app.post('/entry',async(req,res)=>{
 
    const items=[       
    {...req.body,
@@ -82,8 +84,8 @@ let ag="";
    ];
 ag=req.body.name;
   em= req.body.email;
-
-  const entry= Entry.insertMany(items)
+await Entry.deleteMany({});
+  const entry=await Entry.insertMany(items)
    .then(()=>{
        console.log('inserted')
     })
